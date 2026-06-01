@@ -10,8 +10,6 @@
 </p>
 
 
-# Fedora Silverblue Post-Installation Script
-
 An utomated post-installation script designed specifically for **Fedora Silverblue 44+**.
 
 
