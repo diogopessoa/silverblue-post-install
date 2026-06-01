@@ -26,24 +26,28 @@ The script provisions a comprehensive suite of curated Flatpaks, including:
 > [!WARNING]
 > For security and profile scoping reasons, **do not run this script directly as `root` or via `sudo`**. The script will prompt you for administrative privileges (`sudo`) only when interacting with system services or system-wide Flatpak remotes.
 
-1. Run script directly:
+Aqui está a correção dos passos, removendo a formatação incorreta do Markdown que causava o erro no terminal e padronizando o nome correto do seu arquivo (`pos-install-silverblue.sh`):
+
+1. Download the script:
+
 ```bash
-   curl -fsSL [https://raw.githubusercontent.com/diogopessoa/silverblue-post-install/main/silverblue-post-install.sh](https://raw.githubusercontent.com/diogopessoa/silverblue-post-install/main/pos-install-silverblue.sh) -o silverblue-post-install.sh
-   
+curl -fsSL https://raw.githubusercontent.com/diogopessoa/silverblue-post-install/main/silverblue-post-install.sh -o silverblue-post-install.sh
+
 ```
 
 2. Make the script executable:
 
 ```bash
-   chmod +x silverblue-post-install.sh
+chmod +x psilverblue-post-install.sh
+
 ```
 
 3. Run the script:
 
 ```bash
-   ./silverblue-post-install.sh
-```
+./silverblue-post-install.sh
 
+```
 
 4. Once the completion summary appears, **restart your system** to apply all changes!
 
