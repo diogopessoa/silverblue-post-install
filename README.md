@@ -1,15 +1,27 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/diogopessoa/silverblue-post-install/main/FILES/silverblue-postinstall-banner.png" alt="Fedora Silverblue Post-Installation Banner" width="100%" style="border-radius: 8px;">
+</p>
+
+<h1 align="center">Fedora Silverblue Post-Installation</h1>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Fedora-Atomic%20OS-blue?style=for-the-badge&logo=fedora&logoColor=white" alt="Fedora OS">
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License">
+</p>
+
+
 # Fedora Silverblue Post-Installation Script
 
-A robust, streamlined, and automated post-installation script designed specifically for **Fedora Silverblue 44+**.
+An utomated post-installation script designed specifically for **Fedora Silverblue 44+**.
 
 
 ## 🚀 Key Features
 
 * **Network Optimization:** Disables `NetworkManager-wait-online.service` to accelerate system boot times.
 * **Typography:** Installs Microsoft-compatible Office fonts locally for perfect document compatibility.
-* **Modern Aesthetics:** Automatically downloads, deploys, and configures the elegant **Hatter** icon theme, alongside GNOME interface refinements (weekday visibility, disabling hot corners, and a curated set of favorite dock applications).
-* **Enhanced Management:** Deploys the [RPM-OSTree Manager](https://github.com/diogopessoa/rpm-ostree-manager) to simplify deployment rollbacks, updates, and package layer tracking.
-* **Flatpak Migration:** Automatically purges default applications from the upstream Fedora Flatpak remotes and performs a clean migration to the official **Flathub** repository, bulk-installing essential modern software.
+* **Modern Aesthetics:** Automatically downloads, deploys, and configures the elegant [Hatter](https://github.com/Mibea/Hatter) icon theme, alongside GNOME interface refinements (weekday visibility, disabling hot corners, and a curated set of favorite dock applications).
+* **Enhanced Management:** Deploys the [RPM-OSTree Manager](https://github.com/diogopessoa/rpm-ostree-manager) to simplify deployment rollbacks, pin/unpin deployment and package layer tracking.
+* **Flatpak Migration:** Automatically purges default applications from the upstream Fedora Flatpak remotes and performs a clean migration to the official [Flathub](https://flathub.org/) repository, bulk-installing essential modern software.
 
 
 ## 📦 Flathub Flatpak (replace Fedora Flatpak)
@@ -17,7 +29,7 @@ A robust, streamlined, and automated post-installation script designed specifica
 The script provisions a comprehensive suite of curated Flatpaks, including:
 * **Productivity:** OnlyOffice Desktop Editors, GNOME Calendar, GNOME Contacts, Refine (Tweaks), LibreMenuEditor.
 * **System Tools:** Extension Manager, Mission Center, CPU-X, Baobab (Disk Usage), Fedora MediaWriter, Ignition.
-* **Media & Utilities:** G4Music, LocalSend, Loupe (Image Viewer), Papers (Document Viewer), Showtime (Video Player), Snapshot (Camera), SimpleScan, Smile (Emojis).
+* **Media & Utilities:** Gapless (Music), LocalSend (share files), Loupe (Image Viewer), Papers (Document Viewer), Showtime (Video Player), Snapshot (Camera), SimpleScan, Smile (Emojis).
 * **Theming Runtimes:** Adw-gtk3 and Adw-gtk3-dark for seamless GTK3 app integration.
 
 
