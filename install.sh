@@ -6,7 +6,7 @@ set -euo pipefail
 
 # ---------------- Verificação ---------------- 
 if [[ $EUID -eq 0 ]]; then
-  echo "    Run as a standard user: ./pos-install-silverblue.sh"
+  echo "    Run as a standard user: ./install.sh"
   exit 1
 fi
 
