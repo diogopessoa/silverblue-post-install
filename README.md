@@ -38,7 +38,7 @@ curl -fsSL https://raw.githubusercontent.com/diogopessoa/silverblue-post-install
 2. Make the script executable:
 
 ```bash
-chmod +x psilverblue-post-install.sh
+chmod +x silverblue-post-install.sh
 
 ```
 
