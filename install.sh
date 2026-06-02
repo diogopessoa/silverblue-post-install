@@ -55,7 +55,7 @@ fi
 rm -f "$TMP_ZIP"
 
 # 3. ---------------- Hatter Icons Theme ----------------
-echo -e "\n▶ Instalando Hatter Icons..."
+echo -e "\n▶ Installing Hatter Icons..."
 ICONS_DIR="$HOME/.local/share/icons"
 HATTER_DIR="/tmp/Hatter_clone"
 
@@ -86,7 +86,7 @@ if curl -fsSL https://raw.githubusercontent.com/diogopessoa/rpm-ostree-manager/m
 fi
 
 # 6. ---------------- Flathub Flatpak ----------------
-echo -e "\n▶ Iniciando Migração Flatpak Flathub..."
+echo -e "\n▶ Starting Flatpak Flathub Migration..."
 pkill -f gnome-software || true
 flatpak config --system --set languages "pt" || true
 sudo flatpak remote-add --if-not-exists --system flathub https://dl.flathub.org/repo/flathub.flatpakrepo
