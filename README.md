@@ -2,7 +2,6 @@
   <img src="https://raw.githubusercontent.com/diogopessoa/silverblue-post-install/main/FILES/silverblue-postinstall-banner.png" alt="Fedora Silverblue Post-Installation Banner" width="100%" style="border-radius: 8px;">
 </p>
 
-<h1 align="center">Fedora Silverblue Post-Installation</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Fedora-Atomic%20OS-blue?style=for-the-badge&logo=fedora&logoColor=white" alt="Fedora OS">
@@ -10,7 +9,7 @@
 </p>
 
 
-An utomated post-installation script designed specifically for **Fedora Silverblue 44+**.
+An automated post-installation script for **Fedora Silverblue**. Tested on Fedora Silverblue 44, but also compatible with previous versions.
 
 
 ## 🚀 Key Features
@@ -31,33 +30,49 @@ The script provisions a comprehensive suite of curated Flatpaks, including:
 * **Theming Runtimes:** Adw-gtk3 and Adw-gtk3-dark for seamless GTK3 app integration.
 
 
+Aqui está uma versão revisada e polida do seu trecho do `README.md`.
+
+A principal melhoria foi na seção do método puramente gráfico (GUI). Blocos de código em Markdown (usando triple backticks `````) devem ser reservados apenas para comandos de terminal ou blocos de código reais. Para instruções passo a passo textuais, o uso de listas estruturadas (Bullet Points) com formatação em negrito torna a leitura muito mais fluida e profissional.
+
+
 ## 🛠️ Usage Instructions
 
 > [!WARNING]
 > For security and profile scoping reasons, **do not run this script directly as `root` or via `sudo`**. The script will prompt you for administrative privileges (`sudo`) only when interacting with system services or system-wide Flatpak remotes.
 
+### Option 1: Via Terminal
+
 1. Download the script:
+   ```bash
+   curl -fsSL https://raw.githubusercontent.com/diogopessoa/silverblue-post-install/main/install.sh -o install.sh
 
-```bash
-curl -fsSL https://raw.githubusercontent.com/diogopessoa/silverblue-post-install/main/install.sh -o install.sh
-
-```
+   ```
 
 2. Make the script executable:
 
-```bash
-chmod +x install.sh
+  ```bash
+  chmod +x install.sh
 
-```
+  ```
+
 
 3. Run the script:
+  ```bash
+  ./install.sh
 
-```bash
-./install.sh
+  ```
 
-```
 
 4. Once the completion summary appears, **restart your system** to apply all changes!
+
+
+### Option 2: Graphical User Interface (GUI)
+
+
+* **Download:** Navigate to the `install.sh` file on GitHub and click the **Download raw file** icon.
+* **Permissions:** Open your file manager, locate the downloaded `install.sh` file, right-click it, and select **Properties**. Under the permissions tab, check the **Allow executing file as program** box.
+* **Execution:** Right-click the file once more and select **Run as a Program**.
+
 
 
 ## 📄 License
