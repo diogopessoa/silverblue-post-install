@@ -101,16 +101,20 @@ if [ -n "$apps_fedora" ]; then
 fi
 
 lista_apps=(
-    com.mattjakeman.ExtensionManager
     com.brave.Browser
+    com.github.neithern.g4music
+    com.mattjakeman.ExtensionManager
     page.tesk.Refine
+    page.codeberg.libre_menu_editor.LibreMenuEditor
+    it.mijorus.smile
+    io.github.flattool.Ignition
+    io.missioncenter.MissionCenter
+    io.github.thetumultuousunicornofdarkness.cpu-x    
     org.gnome.baobab
     org.gnome.Calculator
     org.gnome.Calendar
     org.gnome.clocks
     org.gnome.Contacts
-    org.fedoraproject.MediaWriter
-    org.gnome.font-viewer
     org.gnome.FileRoller
     org.gnome.Loupe
     org.gnome.Papers
@@ -118,16 +122,11 @@ lista_apps=(
     org.gnome.Snapshot
     org.gnome.Showtime
     org.gnome.TextEditor
-    org.onlyoffice.desktopeditors
-    it.mijorus.smile
-    io.github.flattool.Ignition
-    io.github.thetumultuousunicornofdarkness.cpu-x
-    io.missioncenter.MissionCenter
-    com.github.neithern.g4music
+    org.fedoraproject.MediaWriter    
     org.localsend.localsend_app
-    page.codeberg.libre_menu_editor.LibreMenuEditor
     org.gtk.Gtk3theme.adw-gtk3
     org.gtk.Gtk3theme.adw-gtk3-dark
+    org.onlyoffice.desktopeditors
 )
 
 echo "Installing packages from Flathub..."
