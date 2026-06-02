@@ -21,18 +21,13 @@ An automated post-installation script for **Fedora Silverblue**. Tested on Fedor
 * **Flatpak Migration:** Automatically purges default applications from the upstream Fedora Flatpak remotes and performs a clean migration to the official [Flathub](https://flathub.org/) repository, bulk-installing essential modern software.
 
 
-## 📦 Flathub Flatpak (replace Fedora Flatpak)
+## 📦 Flathub Flatpak
 
-The script provisions a comprehensive suite of curated Flatpaks, including:
+The script replace Fedora Flatpak and provisions a comprehensive suite of curated Flatpaks, including:
 * **Productivity:** OnlyOffice Desktop Editors, GNOME Calendar, GNOME Contacts, Refine (Tweaks), LibreMenuEditor.
 * **System Tools:** Extension Manager, Mission Center, CPU-X, Baobab (Disk Usage), Fedora MediaWriter, Ignition.
 * **Media & Utilities:** Gapless (Music), LocalSend (share files), Loupe (Image Viewer), Papers (Document Viewer), Showtime (Video Player), Snapshot (Camera), SimpleScan, Smile (Emojis).
 * **Theming Runtimes:** Adw-gtk3 and Adw-gtk3-dark for seamless GTK3 app integration.
-
-
-Aqui está uma versão revisada e polida do seu trecho do `README.md`.
-
-A principal melhoria foi na seção do método puramente gráfico (GUI). Blocos de código em Markdown (usando triple backticks `````) devem ser reservados apenas para comandos de terminal ou blocos de código reais. Para instruções passo a passo textuais, o uso de listas estruturadas (Bullet Points) com formatação em negrito torna a leitura muito mais fluida e profissional.
 
 
 ## 🛠️ Usage Instructions
