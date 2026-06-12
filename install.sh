@@ -108,8 +108,8 @@ lista_apps=(
     page.codeberg.libre_menu_editor.LibreMenuEditor
     it.mijorus.smile
     io.github.flattool.Ignition
-    io.missioncenter.MissionCenter
-    io.github.thetumultuousunicornofdarkness.cpu-x    
+    io.github.thetumultuousunicornofdarkness.cpu-x
+    net.nokyan.Resources
     org.gnome.baobab
     org.gnome.Calculator
     org.gnome.Calendar
