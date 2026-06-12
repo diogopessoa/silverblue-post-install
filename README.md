@@ -25,7 +25,7 @@ An automated post-installation script for **Fedora Silverblue**. Tested on Fedor
 
 The script replace Fedora Flatpak and provisions a comprehensive suite of curated Flatpaks, including:
 * **Productivity:** OnlyOffice Desktop Editors, GNOME Calendar, GNOME Contacts, Refine (Tweaks), LibreMenuEditor.
-* **System Tools:** Extension Manager, Mission Center, CPU-X, Baobab (Disk Usage), Fedora MediaWriter, Ignition.
+* **System Tools:** Extension Manager, Resources, CPU-X, Baobab (Disk Usage), Fedora MediaWriter, Ignition.
 * **Media & Utilities:** Gapless (Music), LocalSend (share files), Loupe (Image Viewer), Papers (Document Viewer), Showtime (Video Player), Snapshot (Camera), SimpleScan, Smile (Emojis).
 * **Theming Runtimes:** Adw-gtk3 and Adw-gtk3-dark for seamless GTK3 app integration.
 
