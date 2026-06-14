@@ -100,33 +100,45 @@ if [ -n "$apps_fedora" ]; then
     echo "$apps_fedora" | xargs sudo flatpak uninstall --system --assumeyes || true
 fi
 
+# Search only for the clean ID of the most recent version of ffmpeg-full available on Flathub.
+FFMPEG_LATEST=$(flatpak remote-ls flathub --runtime --columns=ref | grep "org.freedesktop.Platform.ffmpeg-full" | sort -V | tail -n 1)
+
 lista_apps=(
-    com.brave.Browser
-    com.github.neithern.g4music
-    com.mattjakeman.ExtensionManager
-    page.tesk.Refine
-    page.codeberg.libre_menu_editor.LibreMenuEditor
-    it.mijorus.smile
-    io.github.flattool.Ignition
-    io.github.thetumultuousunicornofdarkness.cpu-x
-    net.nokyan.Resources
-    org.gnome.baobab
-    org.gnome.Calculator
-    org.gnome.Calendar
-    org.gnome.clocks
-    org.gnome.Contacts
-    org.gnome.FileRoller
-    org.gnome.Loupe
-    org.gnome.Papers
-    org.gnome.SimpleScan
-    org.gnome.Snapshot
-    org.gnome.Showtime
-    org.gnome.TextEditor
-    org.fedoraproject.MediaWriter    
-    org.localsend.localsend_app
+    "$FFMPEG_LATEST"
     org.gtk.Gtk3theme.adw-gtk3
     org.gtk.Gtk3theme.adw-gtk3-dark
+
+    # ---------------- Browsers and Internet ----------------
+    com.brave.Browser
+    org.localsend.localsend_app
+
+    # ---------------- Productivity and Office ----------------
     org.onlyoffice.desktopeditors
+    org.gnome.Calendar
+    org.gnome.Contacts
+    org.gnome.TextEditor
+    page.codeberg.libre_menu_editor.LibreMenuEditor
+
+    # ---------------- Multimedia e Image ----------------
+    com.github.neithern.g4music
+    org.gnome.Loupe
+    org.gnome.Papers
+    org.gnome.Showtime
+    org.gnome.Snapshot
+
+    # ---------------- System Utilities and Tools ----------------
+    com.mattjakeman.ExtensionManager
+    net.nokyan.Resources
+    io.github.thetumultuousunicornofdarkness.cpu-x
+    io.github.flattool.Ignition
+    org.fedoraproject.MediaWriter
+    org.gnome.baobab
+    org.gnome.Calculator
+    org.gnome.clocks
+    org.gnome.FileRoller
+    org.gnome.SimpleScan
+    page.tesk.Refine
+    it.mijorus.smile
 )
 
 echo "Installing packages from Flathub..."
