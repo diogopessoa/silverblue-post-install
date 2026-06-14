@@ -104,6 +104,7 @@ fi
 FFMPEG_LATEST=$(flatpak remote-ls flathub --runtime --columns=ref | grep "org.freedesktop.Platform.ffmpeg-full" | sort -V | tail -n 1)
 
 lista_apps=(
+    # ---------------- Runtimes and Extensions ----------------
     "$FFMPEG_LATEST"
     org.gtk.Gtk3theme.adw-gtk3
     org.gtk.Gtk3theme.adw-gtk3-dark
@@ -117,7 +118,7 @@ lista_apps=(
     org.gnome.Calendar
     org.gnome.Contacts
     org.gnome.TextEditor
-    page.codeberg.libre_menu_editor.LibreMenuEditor
+    it.mijorus.smile    
 
     # ---------------- Multimedia e Image ----------------
     com.github.neithern.g4music
@@ -138,7 +139,7 @@ lista_apps=(
     org.gnome.FileRoller
     org.gnome.SimpleScan
     page.tesk.Refine
-    it.mijorus.smile
+    page.codeberg.libre_menu_editor.LibreMenuEditor    
 )
 
 echo "Installing packages from Flathub..."
