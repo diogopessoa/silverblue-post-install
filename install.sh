@@ -118,12 +118,12 @@ lista_apps=(
     org.gnome.Calendar
     org.gnome.Contacts
     org.gnome.TextEditor
+    org.gnome.Evince
     it.mijorus.smile    
 
     # ---------------- Multimedia e Image ----------------
     com.github.neithern.g4music
     org.gnome.Loupe
-    org.gnome.Papers
     org.gnome.Showtime
     org.gnome.Snapshot
 
