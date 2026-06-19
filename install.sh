@@ -25,7 +25,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 status_network="${RED} ✗${NC}"
 status_fonts="${RED} ✗${NC}"
 status_icons="${RED} ✗${NC}"
-status_gnome="${RED} ✗${NC}"
 status_manager="${RED} ✗${NC}"
 status_flatpak="${RED} ✗${NC}"
 
@@ -70,22 +69,13 @@ if git clone --depth 1 https://github.com/Mibea/Hatter.git "$HATTER_DIR"; then
 fi
 rm -rf "$HATTER_DIR"
 
-# 4. ---------------- GNOME Setup ---------------- 
-echo -e "\n▶ Applying GNOME preferences for the current user......"
-if gsettings set org.gnome.desktop.interface icon-theme 'Hatter' && \
-   gsettings set org.gnome.desktop.interface clock-show-weekday true && \
-   gsettings set org.gnome.desktop.interface enable-hot-corners false && \
-   gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop','org.gnome.Settings.desktop','org.gnome.Software.desktop','org.gnome.TextEditor.desktop','org.gnome.Calculator.desktop','org.onlyoffice.desktopeditors.desktop','com.brave.Browser.desktop']"; then
-    status_gnome="${GREEN} ✓${NC}"
-fi
-
-# 5. ---------------- RPM-OSTree Manager ----------------
+# 4. ---------------- RPM-OSTree Manager ----------------
 echo -e "\n▶ Installing RPM-OSTree Manager..."
 if curl -fsSL https://raw.githubusercontent.com/diogopessoa/rpm-ostree-manager/main/install.sh | bash; then
     status_manager="${GREEN} ✓${NC}"
 fi
 
-# 6. ---------------- Flathub Flatpak ----------------
+# 5. ---------------- Flathub Flatpak ----------------
 echo -e "\n▶ Starting Flatpak Flathub Migration..."
 pkill -f gnome-software || true
 flatpak config --system --set languages "pt" || true
@@ -108,36 +98,28 @@ lista_apps=(
     "$FFMPEG_LATEST"
     org.gtk.Gtk3theme.adw-gtk3
     org.gtk.Gtk3theme.adw-gtk3-dark
-
-    # ---------------- Browsers and Internet ----------------
     com.brave.Browser
-    org.localsend.localsend_app
-
-    # ---------------- Productivity and Office ----------------
-    org.onlyoffice.desktopeditors
+    com.github.neithern.g4music
+    com.mattjakeman.ExtensionManager
+    io.github.flattool.Ignition
+    io.github.thetumultuousunicornofdarkness.cpu-x
+    it.mijorus.smile
+    net.nokyan.Resources
     org.gnome.Calendar
     org.gnome.Contacts
     org.gnome.TextEditor
     org.gnome.Evince
-    it.mijorus.smile    
-
-    # ---------------- Multimedia e Image ----------------
-    com.github.neithern.g4music
-    org.gnome.Loupe
-    org.gnome.Showtime
-    org.gnome.Snapshot
-
-    # ---------------- System Utilities and Tools ----------------
-    com.mattjakeman.ExtensionManager
-    net.nokyan.Resources
-    io.github.thetumultuousunicornofdarkness.cpu-x
-    io.github.flattool.Ignition
-    org.fedoraproject.MediaWriter
     org.gnome.baobab
     org.gnome.Calculator
     org.gnome.clocks
     org.gnome.FileRoller
     org.gnome.SimpleScan
+    org.gnome.Loupe
+    org.gnome.Showtime
+    org.gnome.Snapshot
+    org.fedoraproject.MediaWriter
+    org.localsend.localsend_app
+    org.onlyoffice.desktopeditors
     page.tesk.Refine
     page.codeberg.libre_menu_editor.LibreMenuEditor    
 )
@@ -150,13 +132,12 @@ if flatpak install --system --assumeyes flathub "${lista_apps[@]}"; then
     status_flatpak="${GREEN} ✓${NC}"
 fi
 
-# 7. ---------------- Summary of Conclusions ----------------
+# 6. ---------------- Summary of Conclusions ----------------
 echo -e "\n"
 echo "▶ Summary: " 
-echo -e " $status_network Network wait-online"
+echo -e " $status_network Network wait-online desabled"
 echo -e " $status_fonts Office Fonts"
 echo -e " $status_icons Hatter Icons Theme"
-echo -e " $status_gnome GNOME Settings"
 echo -e " $status_manager RPM-OSTree Manager"
 echo -e " $status_flatpak Flatpak Migration to Flathub"
 echo ""
