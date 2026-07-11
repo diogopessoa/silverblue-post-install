@@ -7,9 +7,7 @@
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License">
 </p>
 
-# Fedora Silverblue post-install
-
-A minimal post-installation script for Fedora Silverblue. Tested on Silverblue 44, and compatible with older versions as well.
+**Silverblue-Post-Installation** it's a script for Fedora Silverblue. Tested on Silverblue 44, and compatible with older versions as well.
 
 
 ## What the script does
