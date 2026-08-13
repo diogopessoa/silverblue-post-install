@@ -25,7 +25,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 status_network="${RED} ✗${NC}"
 status_fonts="${RED} ✗${NC}"
 status_icons="${RED} ✗${NC}"
-status_manager="${RED} ✗${NC}"
 status_flatpak="${RED} ✗${NC}"
 
 echo ""
@@ -69,13 +68,7 @@ if git clone --depth 1 https://github.com/Mibea/Hatter.git "$HATTER_DIR"; then
 fi
 rm -rf "$HATTER_DIR"
 
-# 4. ---------------- RPM-OSTree Manager ----------------
-echo -e "\n▶ Installing RPM-OSTree Manager..."
-if curl -fsSL https://raw.githubusercontent.com/diogopessoa/rpm-ostree-manager/main/install.sh | bash; then
-    status_manager="${GREEN} ✓${NC}"
-fi
-
-# 5. ---------------- Flathub Flatpak ----------------
+# 4. ---------------- Flathub Flatpak ----------------
 echo -e "\n▶ Starting Flatpak Flathub Migration..."
 pkill -f gnome-software || true
 flatpak config --system --set languages "pt" || true
@@ -132,13 +125,12 @@ if flatpak install --system --assumeyes flathub "${lista_apps[@]}"; then
     status_flatpak="${GREEN} ✓${NC}"
 fi
 
-# 6. ---------------- Summary of Conclusions ----------------
+# 5. ---------------- Summary of Conclusions ----------------
 echo -e "\n"
 echo "▶ Summary: " 
 echo -e " $status_network Network wait-online desabled"
 echo -e " $status_fonts Office Fonts"
 echo -e " $status_icons Hatter Icons Theme"
-echo -e " $status_manager RPM-OSTree Manager"
 echo -e " $status_flatpak Flatpak Migration to Flathub"
 echo ""
 echo "▶ GNOME Extension suggestions: "
