@@ -83,12 +83,8 @@ if [ -n "$apps_fedora" ]; then
     echo "$apps_fedora" | xargs sudo flatpak uninstall --system --assumeyes || true
 fi
 
-# Search only for the clean ID of the most recent version of ffmpeg-full available on Flathub.
-FFMPEG_LATEST=$(flatpak remote-ls flathub --runtime --columns=ref | grep "org.freedesktop.Platform.ffmpeg-full" | sort -V | tail -n 1)
-
 lista_apps=(
     # ---------------- Runtimes and Extensions ----------------
-    "$FFMPEG_LATEST"
     org.gtk.Gtk3theme.adw-gtk3
     org.gtk.Gtk3theme.adw-gtk3-dark
     com.brave.Browser
@@ -138,7 +134,7 @@ echo ""
 echo "* Caffeine by @patapon.info"
 echo "* Clipboard indicator by @tudomatu.com"
 echo "* Dash to Panel by @micxgx:"
-echo "  - Import Dash to Panel dock or panel settings: "
+echo "  - Import DashtoPanel dock or panel settings: "
 echo "   - https://github.com/diogopessoa/my-package-lists/tree/main/share"
 echo ""
 echo -e "${BLUE}${BOLD} Restart the system to apply all changes!${NC}"
