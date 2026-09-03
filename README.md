@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License">
 </p>
 
-**Silverblue-Post-Installation** it's a script for Fedora Silverblue. Tested on Silverblue 44, and compatible with older versions as well.
+**Silverblue-Post-Installation** is a quick, basic configuration script for Fedora Silverblue end-users. Tested on Silverblue 44, and compatible with older and newer versions as well.
 
 
 ## What the script does
@@ -21,10 +21,7 @@
 3. **Hatter icon theme**  
    Downloads and applies the Hatter icon theme for a cleaner desktop look.
 
-4. **RPM-OStree Manager**  
-   Adds a simple tool for tracking deployments, rollbacks, and layered packages.
-
-5. **Migrates Flatpaks to Flathub**  
+4. **Migrates Flatpaks to Flathub**  
    Removes Fedora Flatpak remotes, adds Flathub, and installs a curated set of essential Flatpaks.
 
 ## Flatpaks included
@@ -37,6 +34,12 @@ The script installs a curated set of Flatpaks Flathub, including:
 - GNOME apps
 - System utilities
 - GTK themes
+
+## Screenshot
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/diogopessoa/silverblue-post-install/main/FILES/screenshot-fedora-desktop.png" alt="Fedora Silverblue Post-Installation Banner" width="100%" style="border-radius: 8px;">
+</p>
 
 ## Usage Instructions
 
@@ -62,7 +65,7 @@ systemctl reboot
 
 ## License
 
-MIT License.
+[MIT License](https://github.com/diogopessoa/silverblue-post-install/blob/main/LICENSE)
 
 ## Credits
 
