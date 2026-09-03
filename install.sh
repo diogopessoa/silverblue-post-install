@@ -88,6 +88,7 @@ lista_apps=(
     org.gtk.Gtk3theme.adw-gtk3
     org.gtk.Gtk3theme.adw-gtk3-dark
     com.brave.Browser
+    com.rustdesk.RustDesk
     com.github.neithern.g4music
     com.mattjakeman.ExtensionManager
     io.github.flattool.Ignition
