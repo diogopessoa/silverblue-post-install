@@ -91,12 +91,14 @@ lista_apps=(
     com.rustdesk.RustDesk
     com.github.neithern.g4music
     com.mattjakeman.ExtensionManager
+    io.github.kolunmi.Bazaar
     io.github.flattool.Ignition
     io.github.thetumultuousunicornofdarkness.cpu-x
     it.mijorus.smile
     net.nokyan.Resources
     org.gnome.Calendar
     org.gnome.Contacts
+    org.gnome.font-viewer
     org.gnome.TextEditor
     org.gnome.Evince
     org.gnome.baobab
