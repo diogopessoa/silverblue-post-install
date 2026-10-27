@@ -33,13 +33,14 @@ The script installs a curated set of Flatpaks Flathub, including:
 - LocalSend
 - GNOME apps
 - System utilities
-- GTK themes
 
 ## Screenshot
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/diogopessoa/silverblue-post-install/main/FILES/screenshot-fedora-desktop.png" alt="Fedora Silverblue Post-Installation Banner" width="100%" style="border-radius: 8px;">
 </p>
+
+*The taskbar in the image is an extension (Dash to Panel) that can be installed manually via GNOME Extensions, which is available in the applications menu.*
 
 ## Usage Instructions
 
